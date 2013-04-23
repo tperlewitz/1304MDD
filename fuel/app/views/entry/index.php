@@ -1,4 +1,4 @@
-<h2>Listing Entries</h2>
+<h2>Your Shows</h2>
 <br>
 <?php if ($entries): ?>
 <table class="table table-striped">

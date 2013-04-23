@@ -1,4 +1,4 @@
-<h2>Viewing #<?php echo $entry->id; ?></h2>
+<h2>Show #<?php echo $entry->id; ?></h2>
 
 <p>
 	<strong>Artist:</strong>
