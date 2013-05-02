@@ -2,6 +2,9 @@
 class Controller_Review extends Controller_Template 
 {
 
+	//loads the two collum layout as a default
+	public $template = 'layouts/two_col';
+	
 	public function action_index()
 	{
 		$data['reviews'] = Model_Review::find('all');
