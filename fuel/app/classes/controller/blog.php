@@ -1,6 +1,6 @@
 <?php
 
-class Controller_Blog extends Controller_Template {
+class Controller_Blog extends Controller_Base {
 	
 	//has blog call the two col template found in the layouts folder under views
 	public $template = 'layouts/two_col';

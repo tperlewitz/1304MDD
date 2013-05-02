@@ -1,8 +1,7 @@
 <?php
-class Controller_User extends Controller_Template 
+class Controller_User extends Controller_Base 
 {
-	//removes sidebar from template
-	public $template = 'layouts/full_width';
+	
 
 	//finds all users 
 	public function action_index()
@@ -11,6 +10,26 @@ class Controller_User extends Controller_Template
 		$this->template->title = "Users";
 		$this->template->content = View::forge('user/index', $data);
 
+	}
+
+	public function action_login(){
+		if (Input::method() == 'POST'){
+			if (Auth::login(Input::post('username'), Input::post('pasword'))){
+				Session::set_flash('success', 'You are logged in!');
+				Response::redirect('/');
+			}
+			else{
+				exit('Invalid username or password');
+			}
+		}
+		$this->template->title = 'Login';
+		$this->template->content = View::forge('users/login');
+	}
+
+	public function action_logout(){
+		Auth::logout();
+		Session::set_flash('success', 'You are logged out.');
+		Response::redirect('blog');
 	}
 
 	public function action_view($id = null)

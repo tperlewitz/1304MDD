@@ -23,26 +23,9 @@ Released   : 20120108
 </head>
 <body>
 <div id="wrapper">
-	<div id="header-wrapper">
-		<div id="header">
-			<div id="logo">
-				<h1><a href="#">TuneGenius</a></h1>
-			</div>
-		</div>
-	</div>
+	<?php echo View::forge('includes/header'); ?>
 	<!-- end #header -->
-	<div id="menu-wrapper">
-		<div id="menu">
-			<ul>
-				<li class="current_page_item"><a href="#">Homepage</a></li>
-				<li><a href="#">Reviews</a></li>
-				<li><a href="#">User Info</a></li>
-				<li><a href="#">Terms of Service</a></li>
-				<li><a href="#">Log Out</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</div>
-	</div>
+	<?php echo View::forge('includes/nav'); ?>
 	<!-- end #menu -->
 	<div id="page">
 		<div id="page-bgtop">
@@ -57,41 +40,16 @@ Released   : 20120108
 					<div id="sidebar">
 						<ul>
 							<li>
-								<h2>Aliquam tempus</h2>
-								<p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper consectetuer hendrerit.</p>
+								<h2>Who We Are</h2>
+								<p>TuneGenius is a web application that allows aspiring young music writers the chance to prove they have a real voice on the music</p>
 							</li>
 							<li>
-								<h2>Categories</h2>
-								<ul>
-									<li><a href="#">Aliquam libero</a></li>
-									<li><a href="#">Consectetuer adipiscing elit</a></li>
-									<li><a href="#">Metus aliquam pellentesque</a></li>
-									<li><a href="#">Suspendisse iaculis mauris</a></li>
-									<li><a href="#">Urnanet non molestie semper</a></li>
-									<li><a href="#">Proin gravida orci porttitor</a></li>
-								</ul>
+								<h2>Why We Started</h2>
+								<p>Rarely are people allowed to showcase their talent in a setting that really pits them against one another. Disagree with a user? Make a comment and realy stand behind it! We want authors who don't troll. These are passionate individuals with a goal of making great content.</p>
 							</li>
 							<li>
-								<h2>Blogroll</h2>
-								<ul>
-									<li><a href="#">Aliquam libero</a></li>
-									<li><a href="#">Consectetuer adipiscing elit</a></li>
-									<li><a href="#">Metus aliquam pellentesque</a></li>
-									<li><a href="#">Suspendisse iaculis mauris</a></li>
-									<li><a href="#">Urnanet non molestie semper</a></li>
-									<li><a href="#">Proin gravida orci porttitor</a></li>
-								</ul>
-							</li>
-							<li>
-								<h2>Archives</h2>
-								<ul>
-									<li><a href="#">Aliquam libero</a></li>
-									<li><a href="#">Consectetuer adipiscing elit</a></li>
-									<li><a href="#">Metus aliquam pellentesque</a></li>
-									<li><a href="#">Suspendisse iaculis mauris</a></li>
-									<li><a href="#">Urnanet non molestie semper</a></li>
-									<li><a href="#">Proin gravida orci porttitor</a></li>
-								</ul>
+								<h2>Where Do I Start</h2>
+								<p>Now that you are signed in, get writing! Pick any album, single, EP, mashup you want. It can be decades old or not out yet, provided you have those tunes or can get those tunes. We don't want to waste our communities time reading nonsense. Then get writing and prove you are a TuneGenius!</p>
 							</li>
 						</ul>
 					</div>
@@ -103,10 +61,4 @@ Released   : 20120108
 		</div>
 	</div>
 	<!-- end #page -->
-</div>
-<div id="footer">
-	<p>Copyright (c) 2012 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">FCT</a>.</p>
-</div>
-<!-- end #footer -->
-</body>
-</html>
+<?php echo View::forge('includes/footer'); ?>

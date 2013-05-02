@@ -22,26 +22,18 @@ Released   : 20120108
 </head>
 <body>
 <div id="wrapper">
-	<div id="header-wrapper">
-		<div id="header">
-			<div id="logo">
-				<h1><a href="#">TuneGenius</a></h1>
-			</div>
-		</div>
-	</div>
+	<?php echo View::forge('includes/header'); ?>
 	<!-- end #header -->
-	<div id="menu-wrapper">
-		<div id="menu">
-			<ul>
-				<li class="current_page_item"><a href="#">Homepage</a></li>
-				<li><a href="#">Reviews</a></li>
-				<li><a href="#">User Info</a></li>
-				<li><a href="#">Terms of Service</a></li>
-				<li><a href="#">Log Out</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</div>
-	</div>
+	<?php echo View::forge('includes/nav'); ?>
+	
+	<?php if ($current_user): ?>
+	<p>
+		Logged in as <?php echo Html::anchor('users/view/'.$current_user->id, $current_user->username) ?>
+		(<?php echo Html::anchor('users/logout', 'Log out') ?>)
+	</p>
+<?php else: ?>
+	<p><?php echo Html::anchor('users/login', 'Log in') ?></p>
+<?php endif ?>
 	<!-- end #menu -->
 	<div id="page">
 		<div id="page-bgtop">
@@ -60,10 +52,5 @@ Released   : 20120108
 		</div>
 	</div>
 	<!-- end #page -->
-</div>
-<div id="footer">
-	<p>Copyright (c) 2012 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">FCT</a>.</p>
-</div>
-<!-- end #footer -->
-</body>
-</html>
+<?php echo View::forge('includes/footer'); ?>
+
