@@ -5,6 +5,7 @@ class Controller_Contact extends Controller_Template{
 	//loads the two collum layout as a default
 	public $template = 'layouts/two_col';
 	
+	//designed to allow for message delivery. Catches for message delivery failure and also redirects to a proper sent message if properly executed.
 	public function action_index(){
 
 		$view = View::forge('contact/form');
@@ -26,6 +27,7 @@ class Controller_Contact extends Controller_Template{
 				}
 
 			}
+			//if not all fields are filled out puts up error and empties fields
 			else{
 				$view->error = 'Please fill in all fields';
 			}
@@ -33,7 +35,7 @@ class Controller_Contact extends Controller_Template{
 		$this->template->title = 'Contact us';
 		$this->template->content = $view;
 	}
-
+	//shows the sent message
 	public function action_sent(){
 		$this->template->title = 'Contact sent';
 		$this->template->content = View::forge('contact/sent');

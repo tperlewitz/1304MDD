@@ -26,21 +26,15 @@ Released   : 20120108
 	<!-- end #header -->
 	<?php echo View::forge('includes/nav'); ?>
 	
-	<?php if (current_user){ ?>
-	<p>
-		Logged in as <?php echo Html::anchor('users/view/'.$current_user->id, $current_user->username) ?>
-		(<?php echo Html::anchor('users/logout', 'Log out') ?>)
-	</p>
-<?php }else{ ?>
-	<p><?php echo Html::anchor('users/login', 'Log in') ?></p>
-<?php } ?>
+
 	<!-- end #menu -->
 	<div id="page">
 		<div id="page-bgtop">
 			<div id="page-bgbtm">
 				<div id="page-content">
 					<div id="content">
-
+					<a href="users/create">TuneGenius Login</a><br>
+					<a href="auth/session/facebook">Facebook Login</a>
 						
 						<div style="clear: both;">&nbsp;</div>
 					</div>

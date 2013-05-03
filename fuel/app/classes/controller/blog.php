@@ -1,5 +1,5 @@
 <?php
-
+//have gone through and tried to break and recreate this to a working product. Purpose was to give an alternate look to the reviews stream. 
 class Controller_Blog extends Controller_Template {
 	
 	//has blog call the two col template found in the layouts folder under views

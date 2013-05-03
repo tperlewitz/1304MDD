@@ -12,7 +12,7 @@ class Controller_User extends Controller_Base
 		$this->template->content = View::forge('user/index', $data);
 
 	}
-
+	//was built as a login in response to my full_width page. Code that called this function is README if user logged in response with success if proper exit if not
 	public function action_login(){
 		if (Input::method() == 'POST'){
 			if (Auth::login(Input::post('username'), Input::post('pasword'))){
@@ -26,7 +26,7 @@ class Controller_User extends Controller_Base
 		$this->template->title = 'Login';
 		$this->template->content = View::forge('users/login');
 	}
-
+	//was built as a logout in response to code that was built for full_width. Once logged out a message would appear and redirect to blog.
 	public function action_logout(){
 		Auth::logout();
 		Session::set_flash('success', 'You are logged out.');
