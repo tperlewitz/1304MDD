@@ -32,7 +32,7 @@ Released   : 20120108
 			<div id="page-bgbtm">
 				<div id="page-content">
 					<div id="content">
-					<?php echo $content ?>
+						<?php echo $content ?>
 						
 						<div style="clear: both;">&nbsp;</div>
 					</div>
