@@ -4,7 +4,7 @@ class Controller_Review extends Controller_Template
 
 	//loads the two collum layout as a default
 	public $template = 'layouts/two_col';
-	
+
 	public function action_index()
 	{
 		$data['reviews'] = Model_Review::find('all');
@@ -12,6 +12,7 @@ class Controller_Review extends Controller_Template
 		$this->template->content = View::forge('review/index', $data);
 
 	}
+	
 
 	public function action_view($id = null)
 	{
@@ -27,6 +28,7 @@ class Controller_Review extends Controller_Template
 		$this->template->content = View::forge('review/view', $data);
 
 	}
+
 
 	public function action_create()
 	{
@@ -137,6 +139,5 @@ class Controller_Review extends Controller_Template
 		Response::redirect('review');
 
 	}
-
 
 }

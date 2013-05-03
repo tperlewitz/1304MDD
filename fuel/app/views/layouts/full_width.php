@@ -26,14 +26,14 @@ Released   : 20120108
 	<!-- end #header -->
 	<?php echo View::forge('includes/nav'); ?>
 	
-	<?php if ($current_user): ?>
+	<?php if (current_user){ ?>
 	<p>
 		Logged in as <?php echo Html::anchor('users/view/'.$current_user->id, $current_user->username) ?>
 		(<?php echo Html::anchor('users/logout', 'Log out') ?>)
 	</p>
-<?php else: ?>
+<?php }else{ ?>
 	<p><?php echo Html::anchor('users/login', 'Log in') ?></p>
-<?php endif ?>
+<?php } ?>
 	<!-- end #menu -->
 	<div id="page">
 		<div id="page-bgtop">

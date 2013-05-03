@@ -1,7 +1,8 @@
 <?php
 class Controller_User extends Controller_Base 
 {
-	
+	//loads the two collum layout as a default
+	public $template = 'layouts/full_width';
 
 	//finds all users 
 	public function action_index()
@@ -16,7 +17,7 @@ class Controller_User extends Controller_Base
 		if (Input::method() == 'POST'){
 			if (Auth::login(Input::post('username'), Input::post('pasword'))){
 				Session::set_flash('success', 'You are logged in!');
-				Response::redirect('/');
+				Response::redirect('reviews');
 			}
 			else{
 				exit('Invalid username or password');
